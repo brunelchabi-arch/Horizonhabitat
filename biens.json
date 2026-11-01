@@ -1,0 +1,52 @@
+{
+  "biens": [
+    {
+      "titre": "Villa Les Palmiers",
+      "statut": "vente",
+      "type": "maison",
+      "ville": "Cotonou",
+      "localisation": "Fidjrossè, Cotonou",
+      "prix": 85000000,
+      "chambres": 4,
+      "salles_de_bain": 3,
+      "surface": 220,
+      "extras": [],
+      "image": "images/bien-1.jpg",
+      "image_alt": "Villa moderne avec palmiers et pelouse",
+      "vedette": true,
+      "actif": true
+    },
+    {
+      "titre": "Résidence Les Cocotiers",
+      "statut": "location",
+      "type": "appart",
+      "ville": "Cotonou",
+      "localisation": "Appartement T3 · Haie Vive, Cotonou",
+      "prix": 450000,
+      "chambres": 2,
+      "salles_de_bain": 2,
+      "surface": 90,
+      "extras": [],
+      "image": "images/bien-2.jpg",
+      "image_alt": "Immeuble moderne avec balcons",
+      "vedette": true,
+      "actif": true
+    },
+    {
+      "titre": "Terrain Les Flamboyants",
+      "statut": "vente",
+      "type": "terrain",
+      "ville": "Abomey-Calavi",
+      "localisation": "Abomey-Calavi",
+      "prix": 12000000,
+      "chambres": 0,
+      "salles_de_bain": 0,
+      "surface": 500,
+      "extras": ["Titre foncier", "Accès route"],
+      "image": "images/bien-3.jpg",
+      "image_alt": "Terrain vert prêt à construire",
+      "vedette": true,
+      "actif": true
+    }
+  ]
+}

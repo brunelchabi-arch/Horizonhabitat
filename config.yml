@@ -1,0 +1,50 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: images
+public_folder: images
+
+locale: fr
+
+collections:
+  - name: biens
+    label: Biens immobiliers
+    files:
+      - name: liste
+        label: Liste des biens
+        file: content/biens.json
+        fields:
+          - label: Biens
+            name: biens
+            widget: list
+            summary: "{{fields.titre}} — {{fields.ville}}"
+            fields:
+              - { label: Titre, name: titre, widget: string }
+              - label: Statut
+                name: statut
+                widget: select
+                options:
+                  - { label: À vendre, value: vente }
+                  - { label: À louer, value: location }
+              - label: Type de bien
+                name: type
+                widget: select
+                options:
+                  - { label: Maison / Villa, value: maison }
+                  - { label: Appartement, value: appart }
+                  - { label: Terrain, value: terrain }
+              - label: Ville
+                name: ville
+                widget: select
+                options: [Cotonou, Abomey-Calavi, Porto-Novo]
+              - { label: Localisation affichée (ex. Fidjrossè, Cotonou), name: localisation, widget: string }
+              - { label: Prix en FCFA (loyer mensuel si à louer), name: prix, widget: number, value_type: int, min: 0 }
+              - { label: Chambres, name: chambres, widget: number, value_type: int, default: 0, min: 0 }
+              - { label: Salles de bain, name: salles_de_bain, widget: number, value_type: int, default: 0, min: 0 }
+              - { label: Surface en m², name: surface, widget: number, value_type: int, default: 0, min: 0 }
+              - { label: Atouts (ex. Titre foncier), name: extras, widget: list, required: false, default: [] }
+              - { label: Photo, name: image, widget: image, required: false }
+              - { label: Description de la photo, name: image_alt, widget: string, required: false }
+              - { label: Afficher sur l'accueil, name: vedette, widget: boolean, default: false }
+              - { label: Visible sur le site, name: actif, widget: boolean, default: true }
